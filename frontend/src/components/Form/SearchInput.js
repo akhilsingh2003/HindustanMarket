@@ -23,7 +23,7 @@ const SearchInput = () => {
     <div>
       <form className="d-flex" role="search" onSubmit={handleSubmit}>
         <input
-          className="from-control me-2"
+          className="from-control me-2 rounded"
           type="search"
           placeholder="Search"
           aria-label="Search"

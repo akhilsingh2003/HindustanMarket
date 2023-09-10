@@ -24,7 +24,7 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+      <nav className="navbar navbar-expand-lg  " style={{backgroundColor:'orange'}}>
         <div className="container-fluid ">
           <button
             className="navbar-toggler"
@@ -122,8 +122,8 @@ const Header = () => {
               )}
               <li className="nav-item">
               <Badge count={cart?.length} showZero>
-              <NavLink to="/cart" className="nav-link">
-                  Cart 
+              <NavLink to="/cart" className="nav-link text-black fs-5">
+                  Cart🛒 
                 </NavLink>
               </Badge>
              
