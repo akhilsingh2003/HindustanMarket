@@ -28,7 +28,7 @@ app.use("/api/v1/product",productRoutes)
 
 app.use(express.static('./frontend/build'));
 app.get('*', (req, res)=> {
-  const index = path.join(__dirname,'./frontend/build/index.html' );
+  const index = path.join(__dirname, '/', './frontend/build', 'index.html' );
   res.sendFile(index);
 });
 
