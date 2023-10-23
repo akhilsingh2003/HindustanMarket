@@ -9,13 +9,13 @@ const categoryRoute =require('./routes/categoryRoute')
 const productRoutes =require('./routes/productRoutes')
 const cors =require('cors');
 const path=require('path');
-const fileURLToPath=require('url')
+//const fileURLToPath=require('url')
 
 
 dotenv.config();
 connectDB();
-const _filename=fileURLToPath(import.meta.url);
-const __dirname=path.dirname(_filename); 
+//const _filename=fileURLToPath(import.meta.url);
+//const __dirname=path.dirname(_filename); 
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
