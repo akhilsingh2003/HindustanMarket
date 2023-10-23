@@ -8,6 +8,7 @@ const authRoute =require('./routes/authRoute')
 const categoryRoute =require('./routes/categoryRoute')
 const productRoutes =require('./routes/productRoutes')
 const cors =require('cors');
+const path=require('path');
 
 
 dotenv.config();
@@ -15,6 +16,8 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname,"../frontend/build")));
+
 
 
 
@@ -25,12 +28,8 @@ app.use("/api/v1/product",productRoutes)
 
 
 
-app.get("/",(req,res)=>{
-     res.send(
-        {
-            message:"Welocme to Hindustan Market"
-        }
-     )
+app.get("*",(req,res)=>{
+     res.sendFile(path.join(__dirname,"../frontend/build/index.html"));
 })
 
 

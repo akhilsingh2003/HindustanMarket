@@ -11,7 +11,7 @@ try{
     }
     if(!email){
         return res.send({error:'Email is Required'})
-    }
+    } 
     if(!password){
         return res.send({error:'Password is Required'})
     }
