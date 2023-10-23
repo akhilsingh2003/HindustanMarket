@@ -7,7 +7,7 @@ const app =express()
 const authRoute  = require( './routes/authRoute.js')
 const categoryRoute  = require( './routes/categoryRoute.js')
 const productRoutes  = require( './routes/productRoutes.js')
-
+const path = require('path')
 const cors  = require( 'cors')
 
 
@@ -26,11 +26,11 @@ app.use("/api/v1/product",productRoutes)
 
 
 
-app.get('/',(req,res)=>{
-     res.sendFile(
-        path.join(__dirname,'frontend','build','index.html'))
-     
-    });
+app.use(express.static('../build'));
+app.get('*', (req, res)=> {
+  const index = path.join(__dirname, '/', '../build', 'index.html' );
+  res.sendFile(index);
+});
 
 
 app.listen(process.env.PORT || 8000,()=>{
