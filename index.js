@@ -27,7 +27,9 @@ app.use("/api/v1/product",productRoutes)
 
 
 app.get('/',(req,res)=>{
-     res.send("Welcome to hindustan Market")
+     res.sendFile(
+        path.join(__dirname,'frontend','build','index.html'))
+     
     });
 
 
