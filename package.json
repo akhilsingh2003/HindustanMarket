@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node index.js",
-    "server": "nodemon index.js",
-    "frontend": "npm start --prefix ./frontend",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\""
+    "frontend": "npm start --prefix ./frontend"
   },
   "author": "\"Akhil Singh\"",
   "license": "ISC",
