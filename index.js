@@ -26,10 +26,10 @@ app.use("/api/v1/product",productRoutes)
 
 
 
-app.use(express.static('./frontend/build'));
-app.get('/', (req, res)=> {
-  //const index = path.join(__dirname, '/', './frontend/build', 'index.html' );
-  res.sendFile(path.join("../frontend/build/index.html"));
+app.use(express.static('../build'));
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '../build/index.html');
 });
 
 
