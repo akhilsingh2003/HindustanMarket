@@ -1,7 +1,7 @@
-const express =require('express');
+import express from 'express';
 const router=express.Router();
-const {requireSignIn ,isAdmin} =require('../middlewares/authmiddleware.js')
-const {createCategoryController, updateCategoryController ,categoryController,singleCategoryController ,deleteCategoryController} =require('../controllers/categoryController.js')
+import {requireSignIn ,isAdmin} from '../middlewares/authmiddleware.js'
+import {createCategoryController, updateCategoryController ,categoryController,singleCategoryController ,deleteCategoryController} from '../controllers/categoryController.js'
 
 
 

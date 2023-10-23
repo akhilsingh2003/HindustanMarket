@@ -1,5 +1,5 @@
-const jwt =require('jsonwebtoken');
-const User = require('../models/User');
+import jwt from 'jsonwebtoken'
+import User from '../models/User';
 
 const requireSignIn =async (req, res, next) =>{
     try {

@@ -1,4 +1,4 @@
-const  bcrypt =require('bcrypt');
+import bcrypt from 'bcrypt';
 
  const hashPassword =async(password)=>{
     try{

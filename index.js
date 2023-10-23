@@ -1,21 +1,22 @@
-const express = require ('express')
-const colors=require('colors')
-const dotenv=require('dotenv')
-const morgan = require('morgan');
-const connectDB  = require('./config/db');
+import express  from  'express'
+import colors from 'colors'
+import dotenv from 'dotenv'
+import morgan  from 'morgan'
+import connectDB   from './config/db'
 const app =express();
-const authRoute =require('./routes/authRoute')
-const categoryRoute =require('./routes/categoryRoute')
-const productRoutes =require('./routes/productRoutes')
-const cors =require('cors');
-const path=require('path');
-const fileURLToPath=require('url')
+import authRoute  from './routes/authRoute'
+import categoryRoute  from './routes/categoryRoute'
+import productRoutes  from './routes/productRoutes'
+import cors  from 'cors';
+import path from 'path';
+import fileURLToPath from 'url'
 
 
 dotenv.config();
 connectDB();
-var __filename = path.resolve(__dirname, __filename);
-const __dirname=path.dirname(__filename); 
+const _filename=fileURLToPath(import.meta.url);
+const __dirname=path.dirname(_filename);
+
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
