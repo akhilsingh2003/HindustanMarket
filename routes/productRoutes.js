@@ -1,5 +1,5 @@
-import express from "express";
-import  {
+const express = require("express")
+const  {
   createProductController,
   deleteProductController,
   getProductController,
@@ -13,9 +13,9 @@ import  {
   relatedProductController,
   productCategoryController,
   braintreeTokenController,braintreePaymentController
-} from "../controllers/productController.js";
-import {requireSignIn ,isAdmin} from '../middlewares/authmiddleware.js'
-import formidable from "express-formidable";
+} =require("../controllers/productController.js")
+const {requireSignIn ,isAdmin} =require('../middlewares/authmiddleware.js')
+const formidable =require ("express-formidable")
 
 const router = express.Router();
 

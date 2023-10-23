@@ -1,7 +1,7 @@
-import User from "../models/User";
-import Order from "../models/Order";
-import { hashPassword, comparePassword } from "../utils/authutils";
-import jwt from 'jsonwebtoken'
+const User =require("../models/User")
+const Order=require( "../models/Order")
+const {hashPassword, comparePassword}  =require("../utils/authutils")
+const jwt =require('jsonwebtoken')
 
 const registerController = async(req, res ) => {
 try{

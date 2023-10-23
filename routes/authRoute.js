@@ -1,9 +1,9 @@
-import express from 'express'
+const express =require( 'express')
 const router =express.Router();
-import {requireSignIn, isAdmin} from '../middlewares/authmiddleware.js'
-import {registerController, loginController, testController
+const {requireSignIn, isAdmin} =require( '../middlewares/authmiddleware')
+const {registerController, loginController, testController
     ,forgotPasswordController,updateProfileController
-    ,getOrdersController,getAllOrdersController,orderStatusController} from '../controllers/authController.js'
+    ,getOrdersController,getAllOrdersController,orderStatusController} =require( '../controllers/authController')
 
 router.post("/register",registerController);
 router.post('/login', loginController);

@@ -1,11 +1,11 @@
-import { log }  from "console"
-import Product from  "../models/Product"
-import Category from '../models/Category'
-import fs from "fs"
-import slugify from  "slugify"
-import braintree from "braintree"
-import dotenv from "dotenv"
-import Order  from "../models/Order"
+const  log  =require ("console")
+const Product =require("../models/Product")
+const Category =require ('../models/Category')
+const fs =require("fs")
+const slugify =require("slugify")
+const braintree =require("braintree")
+const dotenv =require("dotenv")
+const Order  =require ("../models/Order")
 
 dotenv.config();
 
