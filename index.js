@@ -29,7 +29,7 @@ app.use("/api/v1/product",productRoutes)
 app.use(express.static('../build'));
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '../build/index.html');
+  res.sendFile(path.join('frontend/','build','index.html'));
 });
 
 
